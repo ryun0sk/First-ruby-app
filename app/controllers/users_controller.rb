@@ -21,8 +21,6 @@ class UsersController < ApplicationController
   def edit
   end
 
-  # POST /users
-  # POST /users.json
   def create
     @user = User.new(user_params)
 
