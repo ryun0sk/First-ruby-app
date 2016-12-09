@@ -1,0 +1,65 @@
+<div class="center">
+  <%=form_tag plans_path ,method:'post' do%>
+    <ul>
+      <li class="float">
+        言語<br>
+        <select name="language">
+          <option value="">-</opotion>
+          <option value="English">English</opotion>
+          <option value="Japanese">Japanese</opotion>
+        </select>
+      </li>
+      <li class="float center">
+        都市<br>
+        <input type="text" name="city">
+      </li>
+      <li class="float">
+        アクセス<br>
+        <select name="access_how">
+          <option value="">-</opotion>
+          <option value="Foot">徒歩</opotion>
+          <option value="Train">電車</opotion>
+          <option value="Bus">バス</opotion>
+          <option value="car">車</opotion>
+          <option value="bicycle">自転車</opotion>
+        </select>
+        <select name="access_time">
+          <option value="">-</opotion>
+          <option value="Foot">〜15分</opotion>
+          <option value="Train">15分〜30分</opotion>
+          <option value="Bus">30分〜45分</opotion>
+          <option value="car">45分〜1時間</opotion>
+          <option value="bicycle">1時間〜</opotion>
+        </select>
+      </li>
+      <div class="clearfix">
+      </div>
+      <li class="float">
+        語学学校<br>
+        <input type="radio" name="school" value="yes">有
+        <input type="radio" name="school" value="no">無
+      </li>
+      <li class="float center">
+        住居<br>
+        <select name="residence">
+          <option value="">-</opotion>
+          <option value="apartment">一人暮らし</opotion>
+          <option value="Dormitory">寮</opotion>
+          <option value="home_stay">ホームステイ</opotion>
+        </select>
+      </li>
+      <li class="float">
+        専攻<br>
+        <select name="major">
+          <option value="">-</opotion>
+          <option value="physics">物理</opotion>
+        </select>
+      </li>
+      <div class="clearfix">
+      </div>
+    </ul>
+    <div class="serach">
+      <input title="検索" type="submit" value="検索">
+    </div>
+  <% end %>
+</div>

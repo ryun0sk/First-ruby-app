@@ -1,0 +1,17 @@
+<% @plans.each do |plan| %>
+<div class="plan_box">
+    <a href="/plans/<%= plan.id %>">
+        <img style="height:120px;float:left;" src="http://www.lee.phys.titech.ac.jp/~tanaka/Prof_Tanaka.jpg">
+    </a>
+    <ul class="float">
+        <li>
+            <%=plans.name%>
+        </li>
+        <li>
+            <%=plans.city%>
+        </li>
+        </ul>
+        <div class="clerfix">
+            </div>
+</div>
+<% end %>
