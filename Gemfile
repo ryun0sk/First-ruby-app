@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+
+gem 'seed-fu'
+
 gem 'devise','3.5.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
