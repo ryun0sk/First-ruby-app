@@ -62,4 +62,12 @@
       <input title="検索" type="submit" value="検索">
     </div>
   <% end %>
+  
+  <%= search_form_for @q, url: universities_path do |f| %>
+
+<%= f.label :name_cont,"大学名" %>
+<%= f.search_field :name_cont %>
+
+<% end %>
+
 </div>

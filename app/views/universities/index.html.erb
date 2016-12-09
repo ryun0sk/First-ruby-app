@@ -2,6 +2,20 @@
 
 <h1>Listing Universities</h1>
 
+<%= search_form_for @q, url: universities_path do |f| %>
+
+<%= f.label :name_cont,"University" %>
+<%= f.search_field :name_cont %>
+
+
+
+<% end %>
+
+
+
+
+
+
 <table>
   <thead>
     <tr>
@@ -16,8 +30,8 @@
     <% @universities.each do |university| %>
       <tr>
         <td><%= university.name %></td>
-        <td><%= university.country %></td>
-        <td><%= university.language %></td>
+        <td><%= university.country&.name %></td>
+        <td><%= university.language&.name %></td>
         <td><%= link_to 'Show', university %></td>
         <td><%= link_to 'Edit', edit_university_path(university) %></td>
         <td><%= link_to 'Destroy', university, method: :delete, data: { confirm: 'Are you sure?' } %></td>

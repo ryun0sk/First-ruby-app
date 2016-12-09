@@ -4,7 +4,9 @@ class UniversitiesController < ApplicationController
   # GET /universities
   # GET /universities.json
   def index
-    @universities = University.all
+    #@universities = University.all
+    @q = University.search(params[:q])
+    @universities = @q.result
   end
 
   # GET /universities/1
