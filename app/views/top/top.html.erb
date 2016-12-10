@@ -64,14 +64,14 @@
   <% end %>
   
   <%= search_form_for @q, url: universities_path do |f| %>
+    <%= f.label :name_cont,"University" %>
+    <%= f.search_field :name_cont %>
+    
+    <%= f.label :country_name_cont,"Country" %>
+    <%= f.search_field :country_name_cont %>
+    
+    <%= f.submit '検索'%>
+  <% end %>
 
-<%= f.label :name_cont,"University" %>
-<%= f.search_field :name_cont %>
-
-<%= f.label :country_name_cont,"Country" %>
-<%= f.search_field :country_name_cont %>
-
-<%= f.submit '検索'%>
-<% end %>
 
 </div>
