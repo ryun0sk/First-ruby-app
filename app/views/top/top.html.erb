@@ -66,6 +66,11 @@
   <%= search_form_for @q, url: universities_path do |f| %>
     <%= f.label :name_cont,"University" %>
     <%= f.search_field :name_cont %>
-  <% end %>
+
+    <%= f.label :country_id_eq,"Country" %>
+    <%= f.collection_select(:country_id_eq, Country.all, :id, :name, include_blank: true) %>
+
+    <%= f.submit '検索する' %>
+<% end %>
 
 </div>
