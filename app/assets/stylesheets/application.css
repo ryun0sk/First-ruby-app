@@ -50,6 +50,8 @@ ul li{
 .link{
     text-decoration:none;
     color:black;
+    height:80%;
+    width:100%;
 }
 .link:visited{color: blue;}
 footer{
