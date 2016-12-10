@@ -1,19 +1,13 @@
-<p id="notice"><%= notice %></p>
+<img style="width:80%" src="@university.image">
+<ul class="detail">
+    <li>University : <%= @university.name%></li>
+    <li>Language : <%= @university.language.name%></li>
+    <li>Country: <%= @university.country.name%></li>
+</ul>
 
-<p>
-  <strong>Name:</strong>
-  <%= @university.name %>
-</p>
-
-<p>
-  <strong>Country:</strong>
-  <%= @university.country %>
-</p>
-
-<p>
-  <strong>Language:</strong>
-  <%= @university.language %>
-</p>
-
-<%= link_to 'Edit', edit_university_path(@university) %> |
-<%= link_to 'Back', universities_path %>
+<div class="favorite_box">
+    <p class="favorite">
+      <%= link_to "お気に入りに登録",like_path%>
+    </p>
+    
+</div>

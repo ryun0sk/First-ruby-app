@@ -9,23 +9,30 @@
 </head>
 <body>
 <header>
-   <ul class="clearfix">
-      <li class="ryugaku">
-        <a href="/top/top">
-          りゅうがく
-        </a>
-      </li>
-      <a class="link_header" href="" data-method="delete">
-      <li class="other_header menu">
-        Sign Out
-      </li>
-    </a>
-    <a class="link_header" href="">
-      <li class="other_header menu">
-        マイページ
-      </li>
-    </a>
-    </ul>
+   <div class="header-left">
+     <%= link_to "りゅうがく",root_path%>
+   </div>
+   <div class="header-right">
+     <ul>
+       
+       <li>
+         <%= link_to "Mypage",root_path%>
+       </li>
+       <li>
+         <%= link_to "LogOut",destroy_user_session_path%>
+       </li>
+     </ul>
+     <ul>
+       <% else %>
+        <li>
+         <%= link_to "Resistration",new_user_registration_path%>
+       </li>
+       <li>
+         <%= link_to "LogIn",new_user_session_path%>
+       </li>
+      
+     </ul>
+   </div>
 </header>
 <div style="width:100%;overflow:scroll;">
   <div style="min-width:1100px;">

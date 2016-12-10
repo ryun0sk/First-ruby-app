@@ -60,21 +60,15 @@ a{
 } 
 /* ヘッダーの記述の開始 */
 header{
-    background-color:red;
+    background-color:blue;
 }
-.menu{
-    font-family:Comic Sans MS;
-    padding: 20px;
-    border-radius: 10px;
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
-    color:black;
+.header-left{
+    float:left;
 }
-.other_header{
-    margin:10px;
+.header-right li{
     float:right;
-    background-color:white;
 }
+
 .other_header:hover{background-color: Cyan;}
 /* ヘッダーの記述の終了 */
 

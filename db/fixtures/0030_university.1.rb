@@ -7,5 +7,6 @@ csv.each do |row|
     s.name = row['name']
     s.country_id = row['country_id']
     s.language_id = row['language_id']
+    s.image = row['image']
   end
 end
