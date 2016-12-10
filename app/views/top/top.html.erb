@@ -64,10 +64,8 @@
   <% end %>
   
   <%= search_form_for @q, url: universities_path do |f| %>
-
-<%= f.label :name_cont,"University" %>
-<%= f.search_field :name_cont %>
-
-<% end %>
+    <%= f.label :name_cont,"University" %>
+    <%= f.search_field :name_cont %>
+  <% end %>
 
 </div>
