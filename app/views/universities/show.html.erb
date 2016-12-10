@@ -9,5 +9,19 @@
     <p class="favorite">
       <%= link_to "お気に入りに登録",like_path%>
     </p>
+<div>
+  <h1>代理店情報</h1>
+  <ul>
+    <li>
+      <%= @university.agent.name %>
+    </li>
+    <li>
+      <%= @university.agent.adress %>
+    </li>
+    <li>
+      <%= @university.agent.tel %>
+    </li>
+  </ul>
+</div>    
     
 </div>
