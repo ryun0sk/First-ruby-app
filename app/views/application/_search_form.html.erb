@@ -4,6 +4,9 @@
 
     <%= f.label :country_name_cont,"Country" %>
     <%= f.search_field :country_name_cont %>
+    <%= f.label :livings_residence_id,"Residence"%>
+    <%= f.collection_select(:livings_residence_id_eq, Residence.all, :id, :name, include_blank: true)%>
 
+    
     <%= f.submit '検索'%>
 <% end %>
