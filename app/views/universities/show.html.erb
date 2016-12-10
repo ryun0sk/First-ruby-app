@@ -6,9 +6,14 @@
 </ul>
 
 <div class="favorite_box">
+  <% if @liked %>
+    お気に入りしてるよ
+    <% else %>
     <p class="favorite">
-      <%= link_to "お気に入りに登録",like_path%>
+      <%= link_to 'お気に入りに登録', like_path(@university.id),method: :post%>
     </p>
+    <% end %>
+    
 <div>
   <h1>代理店情報</h1>
   <ul>

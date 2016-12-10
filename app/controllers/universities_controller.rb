@@ -6,12 +6,13 @@ class UniversitiesController < ApplicationController
   def index
     #@universities = University.all
     @q = University.search(params[:q])
-    @universities = @q.result
+    @universities = @q.result(distinct: true)
   end
 
   # GET /universities/1
   # GET /universities/1.json
   def show
+    @liked = current_user.present? && current_user.likes.find_by(university_id: @university.id)
   end
 
   # GET /universities/new

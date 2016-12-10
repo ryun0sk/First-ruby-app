@@ -9,7 +9,7 @@ Rails.application.routes.draw do
      get :like_universities
    end
   end
-  post 'like/university_id' => 'likes#like', as:'like'
-  delete 'like/university_id' => 'likes#dislike', as:'dislike'
+  post 'like/:university_id' => 'likes#like', as:'like'
+  delete 'like/:university_id' => 'likes#dislike', as:'dislike'
   resources :plans
 end

@@ -14,23 +14,23 @@
    </div>
    <div class="header-right">
      <ul>
-       
+       <% if user_signed_in? %>
        <li>
-         <%= link_to "Mypage",root_path%>
+          <%= link_to 'Mypage', current_user %>
        </li>
        <li>
-         <%= link_to "LogOut",destroy_user_session_path%>
+         <%= link_to 'LogOut', destroy_user_session_path, method: :delete %>
        </li>
      </ul>
      <ul>
        <% else %>
         <li>
-         <%= link_to "Resistration",new_user_registration_path%>
+         <%= link_to 'Resistration',new_user_registration_path%>
        </li>
        <li>
-         <%= link_to "LogIn",new_user_session_path%>
+         <%= link_to 'LogIn',new_user_session_path%>
        </li>
-      
+      <% end %>
      </ul>
    </div>
 </header>
