@@ -7,11 +7,19 @@
 
 <div class="favorite_box">
   <% if @liked %>
-    お気に入りしてるよ
-    <% else %>
     <p class="favorite">
-      <%= link_to 'お気に入りに登録', like_path(@university.id),method: :post%>
+      <%= link_to 'お気に入り取消', unlike_path(@university.id),method: :delete %>
     </p>
+    <% else %>
+     <% if user_signed_in? %>
+    <p class="favorite">
+      <%= link_to 'お気に入りに登録', like_path(@university.id),method: :post %>
+    </p>
+     <% else %>
+    <p class="favorite">
+      <%= link_to 'お気に入りに登録', new_user_registration_path%>
+    </p>
+     <% end %>
     <% end %>
     
 <div>

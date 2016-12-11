@@ -7,46 +7,38 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
+
+
 <body>
-<header>
-   <div class="header-left">
-     <%= link_to "りゅうがく",root_path%>
-   </div>
-   <div class="header-right">
-     <ul>
-       <% if user_signed_in? %>
-       <li>
-          <%= link_to 'Mypage', current_user %>
-       </li>
-       <li>
-         <%= link_to 'LogOut', destroy_user_session_path, method: :delete %>
-       </li>
-     </ul>
-     <ul>
-       <% else %>
-        <li>
-         <%= link_to 'Resistration',new_user_registration_path%>
-       </li>
-       <li>
-         <%= link_to 'LogIn',new_user_session_path%>
-       </li>
-      <% end %>
-     </ul>
-   </div>
-</header>
-<div style="width:100%;overflow:scroll;">
-  <div style="min-width:1100px;">
-    <div class="aaa">
-      <div class="contents">
-        
-<%= yield %>
 
-</div>
-    </div>
+<nav class="navbar navbar-default navbar-fixed-top">
+ <div class="container-fluid">
+     <div class="navbar-header">
+         <%= link_to "りゅうがく",root_path, class:"navbar-brand"%>
+     </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+  <% if user_signed_in? %>
+   <ul class="nav navbar-nav">
+     <li><%= link_to 'Mypage', current_user%></li>
+     <li><%= link_to 'LogOut', destroy_user_session_path, method: :delete %>  </li>
+   </ul>
+  <% else %>
+   <ul class="nav navbar-nav">
+     <li><%= link_to 'Resistration',new_user_registration_path%></li>
+     <li><%= link_to 'LogIn',new_user_session_path%></li>
+    </ul>
+ <% end %>
+        </div>
+ </div>
+</nav>
 
-  </div>
+<div class="contents">
+    <%= yield %>
 </div>
+
 </body>
 <footer>
 </footer>
+
+
 </html>

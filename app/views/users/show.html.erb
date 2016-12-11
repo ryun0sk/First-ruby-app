@@ -1,4 +1,13 @@
-<p style="font-size:30px;"><%= @user.email %>さん</p>
-
-
+<p style="font-size:30px;">
+    <%= link_to "#{@user.email} さん",edit_user_registration_path %></p>
+<p style="font-size:20px;">お気に入りしている大学一覧</p>
+ <% @user.universities.each do |university| %>
+      <img style="width:80%" src="<%= university.image %>">
+<ul class="detail">
+    <li>University : <%= university.name %></li>
+    <li>Language : <%= university.language.name %></li>
+    <li>Country: <%= university.country.name %></li>
+    <li><%= link_to '詳細を見る', university %></li>
+</ul>
+<% end %>
 

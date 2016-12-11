@@ -1,6 +1,9 @@
 source 'https://rubygems.org'
 
 
+
+
+gem 'bootstrap-sass'
 gem 'seed-fu'
 gem 'ransack'
 gem 'devise','3.5.1'

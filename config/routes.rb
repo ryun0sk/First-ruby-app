@@ -10,6 +10,6 @@ Rails.application.routes.draw do
    end
   end
   post 'like/:university_id' => 'likes#like', as:'like'
-  delete 'like/:university_id' => 'likes#dislike', as:'dislike'
+  delete 'like/:university_id' => 'likes#unlike', as:'unlike'
   resources :plans
 end
